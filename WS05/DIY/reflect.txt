@@ -1,0 +1,41 @@
+///////////////////////////////////////////////////
+// Workshop 5  : reflect.txt
+// Student Name: Rong-Yuan, Wen
+// Student ID  : 114556228
+// Email       : rwen1@myseneca.ca
+// Section     : NGG
+///////////////////////////////////////////////////
+Binary Member Operator:
+It involves operations involving two elements, one of which is an instance of the same class. This particular operation enables the class to specify its own operations and results when the operator is used with objects belonging to the class.
+1. Mark& operator=(int mark);
+2. Mark& operator+=(int mark);
+For the first one, in the function body, it first assigns mark to m_mark. Then, it checks if m_mark is between minMark and maxMark. If so, mark isValid as true, indicating that the score is valid. Otherwise, it calls the setEmpty() function, flags isValid to false, and performs some appropriate action to indicate that the score is invalid.
+For the second one, the same, but I use the unary member operator to check whether isValid is true, if it is true, do m_mark += mark, otherwise, it calls the setEmpty() function
+
+Unary member operator:
+ It operates on a single operand, which is an object of the class itself. It allows the class to define its own behavior when the operator is used with objects of that class.
+1. bool operator~() const;
+In DIY, it is simpliy check if isValid is true or fasle, which means the current mark is valid or not.
+
+Type Conversion Operator:
+A type conversion operator is a unique member function that permits a class to establish its own implicit or explicit conversion to a different type. This capability enables objects belonging to one class to be transformed into objects of another class or a primitive type.
+1. operator bool() const;
+2. operator int() const;
+3. operator double() const;
+4. operator char() const;
+In DIY, I use bool() to make sure if mark is in range and the mark is valid then return true or false. If isValue is true, we use int() to show up the current mark, otherwise print the 0.
+double() is used to return a floating point number corresponding to the gpa of the mark, char() is the same to return a character corresponding to the grade of the mark.
+
+Binary helper operators:
+Helper functions (member functions) in the class:
+- Defined inside the class as a member function of the class.
+- You can directly access and manipulate the private and protected members of the class.
+- There is no need to specify the type in the parameter list in the function declaration and definition, because it implicitly has an implicit parameter (ie *this) whose type is the category itself.
+- Use the dot operator (.) or arrow operator (->) to invoke.
+Binary helper functions outside the class:
+1. int operator+=(int& value, Mark other);
+- Defined outside the category, member functions that do not belong to the category.
+- The private and protected members of the class cannot be directly accessed and manipulated unless they are declared as friends of the function.
+- The types in the parameter list must be specified in the function declaration and definition, including the types of all parameters and return values.
+- Use the function name and parameter list to call.
+In lab and DIY, both I use outside helper function, more reusable and can be used in another class.

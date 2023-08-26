@@ -1,0 +1,15 @@
+///////////////////////////////////////////////////
+// Workshop 4  : reflect.txt
+// Student Name: Rong-Yuan, Wen
+// Student ID  : 114556228
+// Email       : rwen1@myseneca.ca
+// Section     : NGG
+///////////////////////////////////////////////////
+
+In this workshop, I learned that the default constructor is a constructor without parameters. Call it when creating an object without providing any constructor parameters. If no initialization value is set, it may cause undefined behavior, so it is a good habit to always initialize the member values in the object; the destructor is a special member Function that is called when an object is destroyed or goes out of scope. It is responsible for releasing any resources allocated by the object to prevent memory leaks. If the dynamic memory allocation is not manually deleted in the main program, the destructor will be called automatically.
+Learn to define and implement constructors with different numbers of parameters. If there is no completely consistent parameter type, the closest constructor will be implicitly type converted and called.
+
+Since the user cannot predict the length of the string when inputting it, the best way is to use dynamic memory allocation, and use cin to read blank symbols as newlines by default, and the remaining strings will be left in the buffer.
+Originally, I used getline to read. The advantage is that it will take the newline symbol out of the buffer but not put it into the string! But this workshop limits the length to 70. If I use string, I need to deal with the length additionally.
+So later changed to use cin.getline, it needs to read two parameters, the first is the pointer to the character array, the second is the maximum number of characters to read (including the terminating null character) so I set the second The number of parameters is 71. When a newline character is read, it is discarded and a null character is appended to the end of the stored string.
+ 

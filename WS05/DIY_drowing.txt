@@ -1,0 +1,122 @@
+Header
+//class Mark
+	//{
+	//private:
+	//	int m_mark;
+	//	double m_gpa;
+	//	char m_grade;
+	//	void setEmpty();
+	//public:
+	//	Mark();
+	//	Mark(int mark);
+
+	//	bool operator~() const;
+	//	operator bool() const;
+	//	operator int() const;
+	//	operator double() const;
+	//	operator char() const;
+
+	//	Mark& operator+=(int mark);
+	//	Mark& operator=(int mark);
+	//};
+
+
+	//int operator+=(int& value, Mark other);
+
+
+Body
+/*void Mark::setEmpty()
+	{
+		m_mark = -1;
+		m_gpa = 0.0;
+		m_grade = 'X';
+	}
+	Mark::Mark()
+	{
+		m_mark = 0;
+		m_gpa = 0.0;
+		m_grade = 'X';
+	}
+
+	Mark::Mark(int mark)
+	{
+		setEmpty();
+		if (mark > -1 && mark < 101)
+		{
+			m_mark = mark;
+		}
+	}
+
+	bool Mark::operator~() const
+	{
+		return m_mark >= 0 && m_mark <101 ? true : false;
+	}
+	
+	Mark::operator int() const
+	{
+		return ~(*this) ? m_mark : 0;		
+	}
+
+	Mark::operator double() const
+	{
+		return m_gpa;
+	}
+
+	Mark::operator char() const
+	{
+		return m_grade;
+	}
+
+	Mark& Mark::operator+=(int mark)
+	{
+		if (~(*this))
+		{
+			m_mark += mark;
+		}
+		return *this;
+
+	}
+
+	Mark& Mark::operator=(int mark)
+	{
+		m_mark = mark;
+	   if (m_mark > -1 && m_mark < 50)
+       {
+           m_gpa = 0.0;
+		   m_grade = 'F';
+       }
+       else if (m_mark < 60)
+       {
+           m_gpa = 1.0;
+		   m_grade = 'D';
+       }
+       else if (m_mark < 70)
+       {
+           m_gpa = 2.0;
+		   m_grade = 'C';
+       }
+       else if (m_mark < 80)
+       {
+           m_gpa = 3.0;
+		   m_grade = 'B';
+       }
+       else if (m_mark < 101)
+       {
+           m_gpa = 4.0;
+		   m_grade = 'A';
+       }
+       else
+       {
+           m_gpa = 0.0;
+		   m_grade = 'X';
+       }
+		return *this;
+	}
+
+	int operator+=(int& value, Mark other)
+	{
+		int ret;
+		ret = value + int(other);
+		value = ret;
+		return ret;
+	}*/

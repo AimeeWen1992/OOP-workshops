@@ -1,0 +1,12 @@
+///////////////////////////////////////////////////
+// Workshop 9  : reflect.txt
+// Student Name: Rong-Yuan, Wen
+// Student ID  : 114556228
+// Email       : rwen1@myseneca.ca
+// Section     : NGG
+///////////////////////////////////////////////////
+
+Throughout this workshop, I have learned when the derived class inherits publicly from the base class (`class Derived : public Base`), all public members of the base class remain public in the derived class. The protected members of the base class become protected in the derived class. The private members of the base class are not directly accessible in the derived class.
+Since HtmlText inherits from Text, it has access to all the protected and public members of the Text class, including operator[]. This is the advantage of using public inheritance when we want to establish an "is-a" relationship between classes and allow derived classes to access and extend the functionalities of the base class.
+
+By following the "Rule of Three," I can ensure that my classes handle dynamically allocated resources properly, preventing issues like shallow copying and memory leaks. Also through practical examples like the HtmlText class inheriting from the Text class, I have learned about polymorphism and how virtual functions enable runtime function resolution, which is crucial for flexible and extensible code. Furthermore, I have learned how to read the contents of a file into dynamically allocated memory using file streams. I now know how to handle potential errors if the file does not exist or cannot be read.

@@ -1,0 +1,13 @@
+///////////////////////////////////////////////////
+// Workshop 3  : reflect.txt
+// Student Name: Rong-Yuan, Wen
+// Student ID  : 114556228
+// Email       : rwen1@myseneca.ca
+// Section     : NGG
+///////////////////////////////////////////////////
+
+
+This workshop I learn how to using the class instead of struct and I didn't hit too many difficulties, but it was the first time I encountered the need to format output using C++. I did some research and used functions from <iomanip>.
+I used setw(int n) to set the width of the next output field to n characters. left and right were used to set the alignment of the field to left-aligned and right-aligned, respectively. I used fixed to set the floating -point number output format to fixed decimal point. setprecision(int n) allowed me to set the precision of floating-point numbers in the output stream to n digits. Lastly, setfill(char c) was used to set the character used to fill the field to c.
+
+In Part 1, I noticed that some classmates were experiencing uninitialized problems, causing issues with the Matrix. After helping with debugging, I found that one of the reasons was the lack of manually adding the null terminator after copying strings. In my Part 1, I took care of adding the null terminator manually. In Part 2, I went back to review the cstring.cpp from the first week and discovered that the logic after the else statement in strnCpy was also missing the null terminator. Therefore, I corrected the strnCpy function in cstring.cpp, eliminating the need to handle the null terminator when copying strings in the future.

@@ -1,0 +1,12 @@
+///////////////////////////////////////////////////
+// Workshop 1  : reflect.txt
+// Student Name: Rong-Yuan, Wen
+// Student ID  : 114556228
+// Email       : rwen1@myseneca.ca
+// Section     : NGG
+///////////////////////////////////////////////////
+
+
+
+
+In this workshop, part 1, we practised separating the header files and implementation files, which we provided to the compiler, and using the namespace and preprocess of safeguard. The compiler will then link the declarations from the header file with the corresponding implementation from the implementation file, producing the final executable. According to the long code of the IPCC144 milestone, I realised separating header files and implementation files could promote code modularity and maintainability. It enables efficient compilation, improves dependency management, and enhances code organisation and documentation. But for now, I am still not certain I understand the encapsulation. For part 2, I was stuck on how to move the pointer address to the location assigned. I did some research and realised we can use increment or decrement to achieve the move. It is convenient to use add and subtract on a pointer, but it seems dangerous as well. If we increment or decrement an uninitialized pointer, the pointer may point to arbitrary memory locations and could easily cause memory leaks. In the end,it is starting to feel good to use the pointer function to achieve some goals, but I am also feeling headaches at the same time.

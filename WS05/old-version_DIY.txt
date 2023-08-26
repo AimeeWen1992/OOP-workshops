@@ -1,0 +1,164 @@
+namespace sdds {
+	class Mark
+	{
+	private:
+		int m_mark;
+		char m_letter;
+		double m_gpa;
+		void setDault();
+	public:
+		Mark();
+		Mark(int mark);
+		bool operator~() const;
+		operator int();
+		operator double() ;
+		operator char() ;
+
+		Mark& operator+=(int mark);
+		Mark& operator=(int mark);
+	};
+
+	int operator+=(int& value, Mark other);
+}
+
+
+--------------------------------------------------------------
+
+using namespace std;
+namespace sdds 
+{
+	void Mark::setDault()
+	{
+		m_mark = -1;
+		m_letter = 'X';
+		m_gpa = 0.0;
+	}
+
+	Mark::Mark()
+	{
+        m_mark = 0;
+        m_letter = 'X';
+        m_gpa = 0.0;
+	}
+
+	Mark::Mark(int mark)
+	{
+        setDault();
+        if (mark > -1 && mark < 101)
+        {
+            m_mark = mark;
+        }
+	}
+
+    bool Mark::operator~() const
+    {
+        return m_mark >= 0 && m_mark < 101 ? true : false;
+    }
+
+	Mark::operator int()
+	{
+        int result = 0;
+        if (~(*this))
+        {
+            result = m_mark;
+        }
+        else
+        {
+            setDault();
+        }
+
+        return result;
+
+        //return ~(*this) ? m_mark : 0;
+       
+	}
+
+    Mark::operator double() 
+    {
+        if (~(*this))
+        {
+            if (m_mark > -1 && m_mark < 50)
+            {
+                m_gpa = 0.0;
+            }
+            else if (m_mark < 60)
+            {
+                m_gpa = 1.0;
+            }
+            else if (m_mark < 70)
+            {
+                m_gpa = 2.0;
+            }
+            else if (m_mark < 80)
+            {
+                m_gpa = 3.0;
+            }
+            else if (m_mark < 101)
+            {
+                m_gpa = 4.0;
+            }
+        }
+        else
+        {
+            setDault();
+        }
+        
+        return m_gpa;
+    }
+
+    Mark::operator char()
+    {
+        if (~(*this))
+        {
+            if (m_mark > -1 && m_mark < 50)
+            {
+                m_letter = 'F';
+            }
+            else if (m_mark < 60)
+            {
+                m_letter = 'D';
+            }
+            else if (m_mark < 70)
+            {
+                m_letter = 'C';
+            }
+            else if (m_mark < 80)
+            {
+                m_letter = 'B';
+            }
+            else if (m_mark < 101)
+            {
+                m_letter = 'A';
+            }
+        }
+        else
+        {
+            setDault();
+        }
+        return m_letter;
+    }
+
+	Mark& Mark::operator+=(int mark)
+	{
+        if (~(*this))
+        {
+            this->m_mark += mark;   
+        }
+		return *this;
+	}
+
+    Mark& Mark::operator=(int mark)
+    {
+        this->m_mark = mark;
+        return *this;
+    }
+
+   int operator+=(int& value, Mark other)
+    {
+        int ret;
+        ret = value + int(other);
+        value = ret;
+        return ret;
+    }
+
+}

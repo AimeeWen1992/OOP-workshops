@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////
+// Workshop 7  : reflect.txt
+// Student Name: Rong-Yuan, Wen
+// Student ID  : 114556228
+// Email       : rwen1@myseneca.ca
+// Section     : NGG
+///////////////////////////////////////////////////
+
+
+Inheritance: In the workshop, we use "class Truck : public MotorVehicle", inheritance allows us to create a new class (derived class->Truck) and inherit properties and methods from an existing class (base class->MotorVehicle). Through inheritance, the derived class can reuse the code already present in the base class and also add additional functionality as needed 
+
+Overriding: it is function overriding, derived classes can overwrite member functions of the base class. This allows the derived class to modify the behavior of the base class according to its own needs. In this workshop, the 'write' and 'read' member functions in the Truck class override the same functions in the base class (MotorVehicle). . By doing so, the Truck class is able to define its own implementation of these functions, tailored to its unique characteristics and functionalities.
+
+Shadowing: if a derived class defines a member function with the same name as a member function in the base class, the derived class's function takes precedence and "shadows" the base class's function. In this case, if the function is accessed through an object of the derived class, the derived class's function will be called instead of the base class's function. This allows the derived class to provide its own implementation of the function, effectively hiding the base class's version when accessed through the derived class's objects.
+
+Accessing shadowed member functions: Although derived class member functions can shadow base class member functions, if we want to access the base class's function, we can use the scope resolution operator (::) to explicitly specify the base class's function.
+In this workshop, in Truck implmentation of 'write' and 'read', we want to use write and read function of MotorVehicle, so we need to use MotorVehicle::read(in); and MotorVehicle::write(os); to refer to base class in case mess up derived class.
+
+Custom input/output operators: we can define input and output operators (>> and <<) to perform input and output operations on custom types. By overloading these operators, we can specify how objects of our custom classes are formatted and displayed during input and output operations. This provides the advantage of improving code readability and flexibility, as we can define specific formatting and behavior for our custom types when interacting with input and output streams. It allows us to customize the way our objects are read from input and how they are represented when printed or written to output.

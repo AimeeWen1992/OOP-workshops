@@ -1,0 +1,11 @@
+///////////////////////////////////////////////////
+// Workshop 8  : reflect.txt
+// Student Name: Rong-Yuan, Wen
+// Student ID  : 114556228
+// Email       : rwen1@myseneca.ca
+// Section     : NGG
+///////////////////////////////////////////////////
+
+In this workshop, The ‘Shape’ is an abstract base class that contains two pure virtual functions draw() and getSpecs(). These pure virtual functions use the "= 0" syntax and these functions have no implementation in the base class and must be overridden in derived classes to provide specific functionality. LblShape also is an abstract class inherited from Shape, and only implements the pure virtual function getSpeecs but not the draw function. We got the actual type in Line and Rectangle, concrete classes can be instantiated, and they provide complete implementations for all their member functions.
+
+Abstract base classes enforce a specific interface for derived classes, defining pure virtual functions that must be implemented in subclasses. The correct draw() and getShape() function implementation is automatically selected based on the actual type of the object, thanks to dynamic polymorphism and virtual functions leading to flexible and extensible code.

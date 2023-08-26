@@ -1,0 +1,24 @@
+///////////////////////////////////////////////////
+// Workshop 6  : reflect.txt
+// Student Name: Rong-Yuan, Wen
+// Student ID  : 114556228
+// Email       : rwen1@myseneca.ca
+// Section     : NGG
+///////////////////////////////////////////////////
+
+
+Copy constructor: it is a unique constructor that generates a fresh object by initializing it with the values of an existing object from the same class. 
+Like "TextFile::TextFile(const TextFile& src)"
+Its purpose creates a copy of a TextFile object by initializing it with another TextFile object.
+
+Copy assignment: is an operation that assigns the value of one object to another object of the same class.
+Like "TextFile& TextFile::operator=(const TextFile& text)"
+It allows assigns the value of one TextFile object to another TextFile object.
+
+Preventing Copying and Assignment: it is to disallow copying and assignment in a class, you can make the copy constructor and copy assignment operator private or delete them.
+Like "Line(const Line&) = delete;" and "Line& operator=(const char&) = delete;"
+
+To overload the insertion operator (<<) and extraction operator (>>): those can be defined a friend function or non-member function, in this workshop, we use as non-member function like "std::ostream& operator<<(std::ostream& ostr, const TextFile& text);" and "std::istream& operator>>(std::istream& istr, TextFile& text);" to define insertion operator that takes the ostream object as the left operand and the class object as the right operand. This function should output the desired representation of the class object to the output stream. And exreaction operaotr that takes the istream object as the left operand and the class object as the right operand. This function should read the input from the stream and populate the class object accordingly.
+The implementation also includes file I/O operations using ifstream and ofstream classes in the setNoOfLines(), loadText(), and saveAs() member functions.
+
+The function that uses the string class to extract an unknown number of characters from the input is getline in this workshop. Specifically, in the TextFile::loadText() function, the line while (getline(file, line)) uses getline to read a line of input from the file and store it in a string object named line. This function allows for reading an unknown number of characters until a newline character or specified delimiter is encountered.

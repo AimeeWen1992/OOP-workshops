@@ -1,0 +1,8 @@
+﻿Build started...
+1>------ Build started: Project: lab, Configuration: Debug x64 ------
+1>Account.cpp
+1>C:\Users\User\Desktop\Assigment_OOP\WS05\lab\Account.cpp(150): warning C4172: returning address of local variable or temporary: ret
+1>lab.vcxproj -> C:\Users\User\Desktop\Assigment_OOP\WS05\lab\x64\Debug\lab.exe
+1>Done building project "lab.vcxproj".
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Elapsed 00:02.074 ==========

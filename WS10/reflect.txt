@@ -1,0 +1,26 @@
+///////////////////////////////////////////////////
+// Workshop 10 : reflect.txt
+// Student Name: Rong-Yuan, Wen
+// Student ID  : 114556228
+// Email       : rwen1@myseneca.ca
+// Section     : NGG
+///////////////////////////////////////////////////
+
+In this workshop, I have implemented two function templates. The first function template, "search," takes a Collection of templated objects, an array of templated objects, the number of elements in the array, and a key value to search for. The function checks if any matches are found in the array and adds them to the Collection. To ensure that the search function works correctly, the templated must use '==' operator to correspond relative type. T - template type 1: "Collection" and the type of object stored in the array. U - template type 2: The type of the "key" value. It must be comparable to an object of type 'T'.
+The second function template, "listArrayElements," prints the elements of an array with a given title. Use customize '<<' operator from abstract base class 'ReadWrite', the actual obj will be determined in runtime.
+
+
+The project is in m52 and m54, when the meun page is called again, there is a problem with the format, the first version I try to use resetiosflags(ios::adjustfield) to reset the number, but it didn't work, so I change another version.
+previous version:
+             os << setw(2) << right << i + 1 << "- ";
+             menuItems[i]->display(os) << endl;
+modify version:
+             os. width(2);
+             os.setf(ios::right);
+             os. fill(' ');
+             os << i + 1 << "- ";
+             os. unsetf(ios::right);
+             menuItems[i]->display(os) << endl;
+In mileston56, check the error handling, I missed the error message when a different message was used. So I use the function overloading feature to create an extra function in utils to handle different error messages.
+             int inputIntRange(int lowerBound, int upperBound);
+             int inputIntRange(int lowerBound, int upperBound, const char* warning);

@@ -1,0 +1,18 @@
+///////////////////////////////////////////////////
+// Workshop 2  : reflect.txt
+// Student Name: Rong-Yuan, Wen
+// Student ID  : 114556228
+// Email       : rwen1@myseneca.ca
+// Section     : NGG
+///////////////////////////////////////////////////
+
+
+This workshop has provided me with valuable knowledge on various concepts, including dynamic memory allocation and references. I have gained an understanding of how to store data obtained from a CSV file in a dynamically allocated array of structures. Additionally, I have learned how to dynamically allocate memory for storing strings within the structures.
+
+I met the problem is when we try to deallocate the memory that I have to delete the inner memory and then outside memory, once I delete the outside memory first and I cant not find the inner address anymore.
+
+In the part-1, there are three overloads as follows:
+   bool read(char* m_name);
+   bool read(int& m_empNo);
+   bool read(double& m_salary);
+the second and third is out parameter as pass by reference, it can use the alias to change the vaule by itself and the first is in parameter and it is pass data to function, which meaning it need to use dynamic memory to allocate. 
